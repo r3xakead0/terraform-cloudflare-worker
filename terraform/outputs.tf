@@ -1,5 +1,5 @@
 output "worker_name" {
-  value = cloudflare_workers_script.node_app.name
+  value = cloudflare_workers_script.node_app.script_name
 }
 
 output "worker_id" {
@@ -7,5 +7,5 @@ output "worker_id" {
 }
 
 output "worker_url" {
-  value = "https://${var.worker_name}.${data.cloudflare_account.this.workers_subdomain}.workers.dev"
+  value = "https://${var.worker_name}.${var.workers_dev_subdomain}.workers.dev"
 }

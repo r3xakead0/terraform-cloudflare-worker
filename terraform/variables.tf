@@ -14,3 +14,9 @@ variable "worker_name" {
   type        = string
   default     = "node-worker-demo"
 }
+
+variable "workers_dev_subdomain" {
+  description = "Your subdomain workers.dev (ex: chainiz)"
+  type        = string
+  default     = "chainiz"
+}

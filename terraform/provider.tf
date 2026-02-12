@@ -1,5 +1,5 @@
 terraform {
-  required_version = ">= 1.10.0"
+  required_version = ">= 1.13.0"
 
   # Configure Terraform Cloud as the remote backend
   cloud {
@@ -13,7 +13,7 @@ terraform {
   required_providers {
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "~> 4.0"
+      version = "5.17.0"
     }
   }
 }
