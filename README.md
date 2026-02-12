@@ -1,8 +1,16 @@
 # Terraform Cloudflare Worker Demo
 
-Este proyecto despliega una aplicación NodeJS en Cloudflare Workers usando Terraform Cloud y GitHub Actions.
+This project deploys a NodeJS application on Cloudflare Workers using Terraform Cloud and GitHub Actions.
 
-## 📁 Estructura
+## 🛠️ Installation
+
+Clone the repository:
+```bash
+git clone https://github.com/r3xakead0/terraform-cloudflare-worker.git
+cd terraform-cloudflare-worker
+```
+
+## 📁 Structure
 
 ```
 terraform-cloudflare-worker/
@@ -19,9 +27,9 @@ terraform-cloudflare-worker/
         ├── destroy.yml
 ```
 
-## 🔐 Secrets requeridos en GitHub
+## 🔐 Secrets required on GitHub
 
-Configurar:
+Configuration:
 
 - TF_API_TOKEN (Terraform Cloud)
 - CLOUDFLARE_API_TOKEN
@@ -48,14 +56,23 @@ Actions → Destroy Worker → Run workflow
 - `/`
 - `/time`
 
-## 🧠 Bonus (arquitectura correcta)
+## 🧠 Workflow
+
+```mermaid
+flowchart LR
+    Developer --> GitHub
+    GitHub --> GitHubActions[GitHub Actions]
+    GitHubActions --> TerraformCloud[Terraform Cloud]
+    TerraformCloud --> CloudflareWorkers[Cloudflare Workers]
+    CloudflareWorkers --> Internet
 
 ```
-Developer → GitHub → GitHub Actions
-                    ↓
-             Terraform Cloud (state)
-                    ↓
-            Cloudflare Workers
-                    ↓
-                Internet
-```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## 📞 Support
+
+For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/r3xakead0/terraform-cloudflare-worker).
