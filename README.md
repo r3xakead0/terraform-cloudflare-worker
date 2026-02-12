@@ -14,7 +14,7 @@ cd terraform-cloudflare-worker
 
 ```
 terraform-cloudflare-worker/
-├── Infrastructure/
+├── terraform/
     ├── main.tf
     ├── provider.tf
     ├── variables.tf
@@ -58,7 +58,7 @@ Configuration:
 
 ## 🚀 Deploy
 
-Ejecutar manualmente:
+Run manually:
 
 ```
 Actions → Deploy Worker → Run workflow
@@ -66,7 +66,7 @@ Actions → Deploy Worker → Run workflow
 
 ## 💥 Destroy
 
-Ejecutar manualmente:
+Run manually:
 
 ```
 Actions → Destroy Worker → Run workflow
