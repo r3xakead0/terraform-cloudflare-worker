@@ -3,7 +3,7 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/") {
-      return new Response("🚀 Hello from Cloudflare Worker with Terraform!", {
+      return new Response("Hello from Cloudflare Worker with Terraform!", {
         headers: { "content-type": "text/plain" }
       });
     }

@@ -1,6 +1,9 @@
 terraform {
+  required_version = ">= 1.10.0"
+
+  # Configure Terraform Cloud as the remote backend
   cloud {
-    organization = "TU_ORGANIZACION_TERRAFORM_CLOUD"
+    organization = "chainiz" # Replace with your org name
 
     workspaces {
       name = "cloudflare-worker-demo"
@@ -15,6 +18,7 @@ terraform {
   }
 }
 
+# Provider configuration
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
 }

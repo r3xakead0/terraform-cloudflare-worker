@@ -27,6 +27,27 @@ terraform-cloudflare-worker/
         ├── destroy.yml
 ```
 
+## ▶️ Run Worker locally
+
+1. Install Wrangler:
+
+```bash
+npm install -g wrangler
+wrangler --version
+```
+
+2. Start the worker:
+
+```bash
+cd app
+wrangler dev worker.js
+```
+
+3. Open in browser:
+
+[http://localhost:8787](http://localhost:8787)
+
+
 ## 🔐 Secrets required on GitHub
 
 Configuration:
