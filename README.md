@@ -47,6 +47,20 @@ wrangler dev worker.js
 
 [http://localhost:8787](http://localhost:8787)
 
+### Terraform Cloud Token
+
+1. Login to [TTerraform Cloud](https://app.terraform.io/) 
+2. Go to User Settings → Tokens
+3. Create a new API token called `github-actions-token`
+4. Save it as `TF_API_TOKEN`
+
+## 🛠️ Terraform Cloud Setup
+
+1. Create a [Terraform Cloud](https://app.terraform.io/) account
+2. Create a new organization
+3. Create a new workspace named `cloudflare-worker-demo` (or your preferred name)
+4. In the workspace settings:
+   - Set "Execution Mode" to "Local" in General option
 
 ## 🔐 Secrets required on GitHub
 
